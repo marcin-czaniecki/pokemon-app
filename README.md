@@ -3,6 +3,9 @@ The application allows you to find your favorite Pokemon. You can use the list w
 
 Where do they get pokemon from: https://pokeapi.co/
 
+#### Main technology: 
+- React
+
 #### Packages used:
 - styled-components
 - react-query
