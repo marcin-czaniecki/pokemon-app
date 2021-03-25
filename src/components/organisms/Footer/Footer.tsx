@@ -36,6 +36,9 @@ const Wrapper = styled.footer`
           color: { secondary }
         }
       }) => secondary};
+      :hover {
+        opacity: 0.9;
+      }
     }
     p {
       margin: 0;
@@ -46,19 +49,6 @@ const Wrapper = styled.footer`
 const Footer = () => {
   return (
     <Wrapper>
-      <div>
-        <p>
-          The application was make as an expansion of a sentence from the
-          "Opanuj JavaScript" course run by "Przeprogramowani".
-        </p>
-        <a
-          href="https://przeprogramowani.pl/kurs-javascript"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://przeprogramowani.pl/kurs-javascript
-        </a>
-      </div>
       <div>
         <p>The icons used are from icons8</p>
         <a

@@ -20,7 +20,7 @@ const DetailedPokemon = ({ data }: { data?: IdetailedPokemon }) => {
       </article>
     );
   } else {
-    return <p>We are looking for this Pokemon!</p>;
+    return <Title heading="p">We are looking for this Pokemon...</Title>;
   }
 };
 

@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const ListPokemon = ({ pokemons, setPokedexState }: IListPokemon) => {
+const ListPokemon = ({ pokemons }: IListPokemon) => {
   return (
     <Wrapper>
       {pokemons.map((item) => {

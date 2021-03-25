@@ -8,6 +8,7 @@ import { delateIcon, searchIcon } from "assets/icons/icons";
 import { IdetailedPokemon } from "interfaces/interfaces";
 import DetailedPokemon from "components/organisms/DetailedPokemon/DetailedPokemon";
 import { fetchPokemon } from "helperFn/queriesFetch";
+import Title from "components/atoms/Title/Tilte";
 
 const Wrapper = styled.div<{ active: boolean }>`
   position: fixed;
@@ -40,9 +41,8 @@ const SearchBar = () => {
   const [active, setActive] = useState(false);
   const [name, setName] = useState("bulbasaur");
 
-  const { isLoading, error, data, refetch } = useQuery<IdetailedPokemon>(
-    "pokemon",
-    () => fetchPokemon(name)
+  const { error, data, refetch } = useQuery<IdetailedPokemon>("pokemon", () =>
+    fetchPokemon(name)
   );
   const toggle = () => {
     setActive(!active);
@@ -74,10 +74,12 @@ const SearchBar = () => {
           </Button>
         </form>
         <div>
-          {isLoading && <p>We are looking for this Pokemon!</p>}
           {error ? (
             <>
-              <div>We can't find this pokemon: / </div>
+              <Title heading="p">We can't find this pokemon</Title>
+              <span role="img" aria-label="It's sad">
+                😔
+              </span>
             </>
           ) : (
             <DetailedPokemon data={data} />

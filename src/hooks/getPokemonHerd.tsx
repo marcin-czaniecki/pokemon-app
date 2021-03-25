@@ -6,10 +6,12 @@ const GetPokemonHerd = (limit: number) => {
   const { isLoading, data, refetch } = useQuery("pokemons", () =>
     fetchPokemons(limit, offset)
   );
+
   const prevFn = () => {
     offset -= offset > 0 ? limit : 0;
     refetch();
   };
+
   const nextFn = () => {
     offset += limit;
     refetch();

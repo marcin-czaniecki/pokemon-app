@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   animation: comingFormRight 500ms;
 `;
 
-const Pokemon = ({ name, url, setPokedexState }: IPokemon) => {
+const Pokemon = ({ name, url }: IPokemon) => {
   const [active, setActive] = useState(false);
 
   const { data, refetch } = useQuery<IdetailedPokemon>(
     `${name}`,
     () => fetchPokemon(name),
     {
-      enabled: false
+      enabled: false,
     }
   );
 

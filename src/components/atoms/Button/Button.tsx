@@ -31,9 +31,9 @@ const Button = styled.button<{ poke?: boolean; secondary?: boolean }>`
         content: " ";
         position: absolute;
         display: block;
-        bottom: 13px;
+        bottom: 10px;
         left: 13px;
-        height: 1px;
+        height: 2px;
         width: 100%;
         background-color: ${({ theme: { color } }) => color.primary};
         transform: translateX(-150%);
