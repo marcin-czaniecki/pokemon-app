@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: poke;
+    font-display: swap;
     src: url("https://uploads.codesandbox.io/uploads/user/106c33fb-afe6-4256-8be8-3bfaab73b325/qOI9-Pokemon+Solid.ttf")  format("truetype");
   }
 *{
