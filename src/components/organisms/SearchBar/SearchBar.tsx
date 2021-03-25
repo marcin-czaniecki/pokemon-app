@@ -58,12 +58,13 @@ const SearchBar = () => {
         >
           <Input
             id="search"
-            onKeyUp={(e) => {
+            onChange={(e) => {
               const value = e.currentTarget.value;
               setName(value.toLowerCase());
             }}
             placeholder="Find your pokemons"
             autoComplete="off"
+            value={name}
           />
           <Button
             onClick={() => {
